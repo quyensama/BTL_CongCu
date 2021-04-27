@@ -18,7 +18,7 @@ $this->fileLayout = "LayoutTrangTrong.php";
             <input type="password" class="input-control" name="password" required="">
           </div>
           <div class="text-center">
-            <input type="submit" class="button btn bg-primary text-white" value="Đăng ký">
+            <input type="submit" class="button btn bg-primary text-white" value="Đăng nhập">
           </div>
         </form>
       </div>

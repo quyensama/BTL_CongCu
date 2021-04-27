@@ -51,7 +51,7 @@
       </div>
 
       <div class="row">
-        <div class="col-xs-12 col-md-3">
+        <div class="col-xs-12 col-md-3" style="border-right: 1px solid #ddd;">
           <!-- box search -->
           <div class="panel panel-default" style="margin-top:15px;">
             <div class="panel-heading bg-info text-center" style="padding: 0.5rem; text-transform: uppercase;"> Tìm theo mức giá </div>

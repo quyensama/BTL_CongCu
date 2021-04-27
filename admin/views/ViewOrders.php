@@ -1,11 +1,6 @@
-<?php 
-  //load file LayoutTrangChu.php
-  $this->fileLayout = "LayoutTrangTrong.php";
- ?>
-
-<div class="template-cart">
-   <h3>Danh sách đơn hàng</h3>
-   <div class="col-md-12">    
+<!-- load file layout chung -->
+<?php $this->fileLayout = "Layout.php"; ?>
+<div class="col-md-12">    
     <div class="panel panel-primary">
         <div class="panel-heading">List Orders</div>
         <div class="panel-body">
@@ -36,23 +31,19 @@
                      <td style="text-align: center;">
                          <?php if($rows->status == 1): ?>
                             <span class="label label-primary">Đã giao hàng</span>
-                          <?php endif; ?>
-                         <?php if($rows->status == 2): ?>
+                         <?php else: ?>
                             <span class="label label-danger">Chưa giao hàng</span>
-                          <?php endif; ?>
-                          <?php if($rows->status == 3): ?>
-                            <span class="label label-warning">Đã hủy</span>
                          <?php endif; ?>
                      </td>
                      <td style="text-align: center;">
-                      <?php if($rows->status == 0): ?>
-                        <a href="index.php?controller=account&action=removeOrders&id=<?php echo $rows->id; ?>" class="label label-success">Hủy đơn hàng</a>
-                      <?php endif; ?>
+                        <a href="index.php?controller=orders&action=detail&id=<?php echo $rows->id; ?>" class="label label-success">Chi tiết</a>
+                        <?php if($rows->status == 0): ?>
+                            <a href="index.php?controller=orders&action=delivery&id=<?php echo $rows->id; ?>" class="label label-info">Giao hàng</a>
+                         <?php endif; ?>
                      </td>
                  </tr>
                 <?php endforeach; ?>
             </table>
-            
             <style type="text/css">
                 .pagination{padding:0px; margin:0px;}
             </style>
@@ -65,6 +56,4 @@
             </ul>
         </div>
     </div>
-</div> 
-  
 </div>

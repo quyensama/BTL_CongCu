@@ -1,4 +1,5 @@
-<?php 
+
+<?php
     //load file Layout.php
     $this->fileLayout = "Layout.php";
  ?>
@@ -24,7 +25,7 @@
                         <a href="index.php?controller=categories&action=delete&id=<?php echo $rows->id; ?>" onclick="return window.confirm('Are you sure?');">Delete</a>
                     </td>
                 </tr>
-                    <?php 
+                    <?php
                         $dataSub = $this->modelReadSub($rows->id);
                      ?>
                      <?php foreach($dataSub as $rowsSub): ?>

@@ -94,6 +94,13 @@
                     <span>Users</span>
                 </a>
             </li>
+            <!-- Nav Item - Users -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="index.php?controller=customers" >
+                    <i class="fa fa-code"></i>
+                    <span>Customers</span>
+                </a>
+            </li>
             <!-- Nav Item - Đăng Xuất -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="index.php?controller=login&action=logout" >

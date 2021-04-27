@@ -40,7 +40,7 @@
 				}
 			}else
 				header("location:index.php?controller=account&action=login");
-		}
+		} 
 		public function modelLogout(){
 			unset($_SESSION["customer_id"]);
 			unset($_SESSION["customer_email"]);

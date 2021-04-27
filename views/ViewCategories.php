@@ -1,7 +1,6 @@
 <ul class="main-nav hidden-xs hidden-sm list-unstyled" id="menu">
           <li class="active"><a href="index.php">Trang chủ</a></li>
-          <li class="has-submenu"> <a href="/collections/all"> <span>Sản phẩm</span><i class="fa fa-caret-down"
-                style="margin-left: 5px;"></i> </a>
+          <li class="has-submenu"> <a href="#"> <span>Sản phẩm</span><i class="fa fa-caret-down" style="margin-left: 5px;"></i> </a>
             <ul class="list-unstyled level1">
             <?php 
                 $categories = $this->modelListCategories();
@@ -18,6 +17,7 @@
             </ul>
           </li>
           <li><a href="index.php?controller=cart">Giỏ hàng</a></li>
-          <li><a href="index.php?controller=news">Tin tức</a></li>
+          <!-- <li><a href="index.php?controller=news">Tin tức</a></li> -->
+          <li><a href="index.php?controller=orders">Đơn hàng</a></li>
         <li><a href="index.php?controller=contact">Liên hệ</a></li>
         </ul>

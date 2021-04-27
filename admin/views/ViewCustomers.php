@@ -4,7 +4,7 @@
  ?>
 <div class="col-md-12">
     <div style="margin-bottom:5px;">
-        <a href="index.php?controller=users&action=create" class="btn btn-primary">Add user</a>
+        <!-- <a href="index.php?controller=customers&action=create" class="btn btn-primary">Add user</a> -->
     </div>
     <div class="panel panel-primary">
         <div class="panel-heading">List User</div>
@@ -14,7 +14,7 @@
                     <th>Fullname</th>
                     <th>Email</th>
                     <th style="width:100px;"></th>
-                </tr>
+                </tr> 
                 <?php 
                     foreach($data as $rows):
                  ?>
@@ -22,8 +22,8 @@
                     <td><?php echo $rows->name; ?></td>
                     <td><?php echo $rows->email; ?></td>
                     <td style="text-align:center;">
-                        <a href="index.php?controller=users&action=update&id=<?php echo $rows->id; ?>">Edit</a>&nbsp;
-                        <!-- <a href="index.php?controller=users&action=delete&id=<?php echo $rows->id; ?>" onclick="return window.confirm('Are you sure?');">Delete</a> -->
+                        <!-- <a href="index.php?controller=customers&action=update&id=<?php echo $rows->id; ?>">Edit</a>&nbsp; -->
+                        <a href="index.php?controller=customers&action=delete&id=<?php echo $rows->id; ?>" onclick="return window.confirm('Are you sure?');">Delete</a>
                     </td>
                 </tr>
                 <?php endforeach; ?>
@@ -34,7 +34,7 @@
             <ul class="pagination">
                 <li class="page-item"><a href="#" class="page-link">Trang</a></li>
                 <?php for($i = 1; $i <= $numPage; $i++): ?>
-                <li class="page-item"><a href="index.php?controller=users&page=<?php echo $i; ?>" class="page-link"><?php echo $i; ?></a></li>
+                <li class="page-item"><a href="index.php?controller=customers&page=<?php echo $i; ?>" class="page-link"><?php echo $i; ?></a></li>
                 <?php endfor; ?>
             </ul>
         </div>

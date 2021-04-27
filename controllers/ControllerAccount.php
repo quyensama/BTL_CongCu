@@ -1,4 +1,4 @@
-<?php 
+<?php  
 	include "models/ModelAccount.php";
 	class ControllerAccount extends Controller{
 		use ModelAccount;

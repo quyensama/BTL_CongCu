@@ -27,6 +27,57 @@
               class="input-control">
             <button style="margin-top:5px;" type="submit"> <i class="fa fa-search" onclick="return search();"></i>
             </button>
+            <div class="smart-search">
+          <ul>
+            <li><img src="http://localhost/BTL_CongCu/assets/upload/products/1619359717_2gether-tap-2.jpg" alt=""><a href="#"><?php echo $product["name"]; ?></a></li>
+            <li><img src="http://localhost/BTL_CongCu/assets/upload/products/1619359717_2gether-tap-2.jpg" alt=""><a href="#"><?php echo $product["name"]; ?></a></li>
+            <li><img src="http://localhost/BTL_CongCu/assets/upload/products/1619359717_2gether-tap-2.jpg" alt=""><a href="#"><?php echo $product["name"]; ?></a></li>
+          </ul>
+        </div>
+        <style>
+        .smart-search{
+          position: absolute;
+          width: 100%;
+          background: #fff;
+          z-index: 1;
+          display: none;
+          height: 350px;
+          overflow: scroll;
+        }
+        .smart-search ul{
+          padding: 0px;
+          margin: 0px;
+          list-style: none;
+        }
+        .smart-search ul li{
+          border-bottom: 1px solid #ddd;
+        }
+        .smart-search img{
+          width: 70px;
+          margin-right: 5px;
+        }
+      </style>
+      <script>
+        $(document).ready(function(){
+          $(".search").keyup(function(){
+            var strKey = $(key).val();
+            // hàm trim() cắt khoảng trắng trái phải của chuỗi
+            if(strKey.trim() == "")
+              $(".smart-search").attr("style", "display:none;");
+            else{
+              $(".smart-search").attr("style", "display:block;");
+              // ------sử dụng ajax để lấy dữ liệu
+              $.get( "index.php?controller=search&action=ajaxSearch&key="+strKey, function( data ) {
+                // clear data của thẻ ul
+                $(".smart-search ul").empty();
+                // thêm dữ liệu vừa lấy được bằng ajax vào thẻ ul
+                $(".smart-search ul").append(data);
+              });
+              // ------
+            }
+          });
+        });
+      </script>
           </div>
           <!--</form>-->
         </div>

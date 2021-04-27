@@ -1,8 +1,8 @@
-<?php 
+<?php
     //load file Layout.php
     $this->fileLayout = "Layout.php";
- ?>                    
-<div class="col-md-12">  
+ ?>
+<div class="col-md-12">
     <div class="panel panel-primary">
         <div class="panel-heading">Add edit category</div>
         <div class="panel-body">
@@ -14,6 +14,7 @@
                     <input type="text" value="<?php echo isset($record->name)?$record->name:""; ?>" name="name" class="form-control" required>
                 </div>
             </div>
+            
             <!-- end rows -->
             <!-- rows -->
             <div class="row" style="margin-top:5px;">
@@ -21,7 +22,7 @@
                 <div class="col-md-10">
                     <select name="parent_id" class="form-control" style="width: 300px;">
                         <option value="0"></option>
-                        <?php 
+                        <?php
                             $data = $this->modelListCategories();
                          ?>
                          <?php foreach($data as $rows): ?>
@@ -38,6 +39,7 @@
                     <input type="submit" value="Process" class="btn btn-primary">
                 </div>
             </div>
+
             <!-- end rows -->
         </form>
         </div>
