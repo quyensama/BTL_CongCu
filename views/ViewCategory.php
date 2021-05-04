@@ -6,7 +6,7 @@ $this->fileLayout = "LayoutTrangTrong.php";
   <div class="tabs-container">
     <div class="row" style="margin-top:10px;">
       <div class="head-tabs head-tab1 col-lg-9">
-        <h2><?php echo $this->modelGetCategoryName(); ?></h2>
+        
       </div>
       <div class="col-lg-3 pull-right text-right">
         <select class="form-control" onchange="location.href = 'index.php?controller=products&action=category&id=<?php echo $category_id; ?>&order='+this.value;">
@@ -30,7 +30,7 @@ $this->fileLayout = "LayoutTrangTrong.php";
           <div class="image"> <a href="index.php?controller=products&action=detail&id=<?php echo $rows->id; ?>"><img src="./assets/upload/products/<?php echo $rows->photo; ?>" title="<?php echo $rows->name; ?>" alt="<?php echo $rows->name; ?>" class="img-responsive"></a>
           </div>
           <div class="info">
-            <h5 class="name text-truncate"><a href="index.php?controller=products&action=detail&id=<?php echo $rows->id; ?>"><?php echo $rows->name; ?></a></h5>
+            <h5 class="name text-truncate"><a href="index.php?controller=products&action=detail&id=<?php echo $rows->id; ?>" title="<?php echo $rows->name; ?>" alt="<?php echo $rows->name; ?>"><?php echo $rows->name; ?></a></h5>
             <p class="price-box"> <span class="special-price"> <span class="price product-price" style="text-decoration:line-through;"> <?php echo number_format($rows->price); ?></span> ₫ </span> </p>
             <p class="price-box"> <span class="special-price" style="font-weight:bold; color:red;"> <span class="price product-price"> <?php echo number_format($rows->price - ($rows->price * $rows->discount / 100)); ?> </span>₫ </span> </p>
             <div class="action-btn">
@@ -52,7 +52,7 @@ $this->fileLayout = "LayoutTrangTrong.php";
             <ul class="pagination">
                 <li class="page-item"><a href="#" class="page-link">Trang</a></li>
                 <?php for($i = 1; $i <= $numPage; $i++): ?>
-                <li class="page-item"><a href="index.php?controller=products&action=category&page=<?php echo $i; ?>" class="page-link"><?php echo $i; ?></a></li>
+                  <li class="page-item"><a class="page-link" href="index.php?controller=products&action=category&id=<?php echo $category_id; ?>&p=<?php echo $i; ?>"><?php echo $i; ?></a></li>
                 <?php endfor; ?>
             </ul>
     <!-- end paging -->

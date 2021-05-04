@@ -12,9 +12,10 @@ $this->fileLayout = "LayoutTrangTrong.php";
     </div>
   </div>
   <div class="tabs-content row">
-    <div id="content-tabb1" class="content-tab content-tab-proindex" style="display:none">
+    <div id="content-tabb1" class="content-tab content-tab-proindex">
       <div class="clearfix">
-        <?php foreach ($data as $rows) : ?>
+        <div class="row">
+          <?php foreach ($data as $rows) : ?>
           <!-- box product -->
           <div class="col-xs-6 col-md-3 col-sm-6 ">
             <div class="product-grid" id="product-1168979" style="height: 400px; overflow: hidden;">
@@ -35,18 +36,20 @@ $this->fileLayout = "LayoutTrangTrong.php";
             </div>
           </div>
           <!-- end box product -->
-        <?php endforeach; ?>
-        <!-- paging -->
-        <div style="clear: both;"></div>
-        <div style="margin-top: -50px;" class="&#x70;&#x61;&#x67;&#x69;&#x6E;&#x61;&#x74;&#x69;&#x6F;&#x6E;&#x2D;&#x63;&#x6F;&#x6E;&#x74;&#x61;&#x69;&#x6E;&#x65;&#x72;">
-          <ul class="pagination">
-            <li class="page-item"><span>Trang</span></li>
-            <?php for ($i = 1; $i <= $numPage; $i++) : ?>
-              <li class="page-item"><a class="page-link" href="index.php?controller=search&fromPrice=<?php echo $fromPrice ?>&toPrice=<?php echo $toPrice ?>&p=<?php echo $i; ?>"><?php echo $i; ?></a></li>
-            <?php endfor; ?>
-          </ul>
+        <?php endforeach; ?> 
         </div>
-        <!-- end paging -->
+        
+   <!-- paging -->
+                <div style="clear: both;"></div>
+                <div style="margin-top: -50px;"  class="&#x70;&#x61;&#x67;&#x69;&#x6E;&#x61;&#x74;&#x69;&#x6F;&#x6E;&#x2D;&#x63;&#x6F;&#x6E;&#x74;&#x61;&#x69;&#x6E;&#x65;&#x72;">
+                  <ul class="pagination">
+                    <li class="page-item"><span>Trang</span></li>
+                    <?php for($i = 1; $i <= $numPage; $i++): ?>
+                    <li class="page-item"><a class="page-link" href="index.php?controller=search&fromPrice=<?php echo $fromPrice ?>&toPrice=<?php echo $toPrice ?>&p=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+                	<?php endfor; ?>
+                  </ul>
+                </div>
+                <!-- end paging --> 
       </div>
     </div>
   </div>

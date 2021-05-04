@@ -7,7 +7,7 @@
             <div class="table-responsive">
               <table class="table table-cart">
                 <thead>
-                  <tr>
+                  <tr class="table-primary">
                     <th class="image">Ảnh sản phẩm</th>
                     <th class="name">Tên sản phẩm</th>
                     <th class="price">Giá bán lẻ</th>

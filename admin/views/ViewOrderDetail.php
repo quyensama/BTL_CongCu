@@ -36,10 +36,12 @@
                 <tr>
                     <th style="width: 100px;">Trạng thái</th>
                     <td>
-                        <?php if($order->status == 0): ?>
-                            <span class="label label-danger">Chưa giao hàng</span>
+                        <?php if($order->status == 1): ?>
+                            <span class="label label-danger">Đã giao hàng</span>
+                        <?php elseif($order->status == 3): ?>
+                            <span class="label label-danger">Đã hủy</span>
                         <?php else: ?>
-                            <span class="label label-primary">Đã giao hàng</span>
+                            <span class="label label-primary">Chưa giao hàng</span>
                         <?php endif; ?>
                     </td>
                 </tr>

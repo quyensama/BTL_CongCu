@@ -34,34 +34,34 @@
 			//tra ve mot ban ghi
 			return $query->fetch();
 		}
-		public function modelUpdate(){
-			$id = isset($_GET["id"])&&$_GET["id"] > 0 ? $_GET["id"] : 0;
-			$name = $_POST["name"];
-			$password = $_POST["password"];
-			//update name
-			//lay bien ket noi csdl
-			$conn = Connection::getInstance();
-			$query = $conn->prepare("update customers set name=:var_name where id=$id");
-			$query->execute(array("var_name"=>$name));
-			//neu password khong rong thi update password
-			if($password != ""){
-				//ma hoa password 
-				$password = md5($password);
-				$query = $conn->prepare("update customers set password=:var_password where id=$id");
-				$query->execute(array("var_password"=>$password));
-			}
-		}
-		public function modelCreate(){
-			$name = $_POST["name"];
-			$email = $_POST["email"];
-			$password = $_POST["password"];
-			//ma hoa password 
-			$password = md5($password);
-			//lay bien ket noi csdl
-			$conn = Connection::getInstance();
-			$query = $conn->prepare("insert into customers set name=:var_name, email=:var_email, password=:var_password");
-			$query->execute(array("var_name"=>$name,"var_email"=>$email,"var_password"=>$password));
-		}
+		// public function modelUpdate(){
+		// 	$id = isset($_GET["id"])&&$_GET["id"] > 0 ? $_GET["id"] : 0;
+		// 	$name = $_POST["name"];
+		// 	$password = $_POST["password"];
+		// 	//update name
+		// 	//lay bien ket noi csdl
+		// 	$conn = Connection::getInstance();
+		// 	$query = $conn->prepare("update customers set name=:var_name where id=$id");
+		// 	$query->execute(array("var_name"=>$name));
+		// 	//neu password khong rong thi update password
+		// 	if($password != ""){
+		// 		//ma hoa password 
+		// 		$password = md5($password);
+		// 		$query = $conn->prepare("update customers set password=:var_password where id=$id");
+		// 		$query->execute(array("var_password"=>$password));
+		// 	}
+		// }
+		// public function modelCreate(){
+		// 	$name = $_POST["name"];
+		// 	$email = $_POST["email"];
+		// 	$password = $_POST["password"];
+		// 	//ma hoa password 
+		// 	$password = md5($password);
+		// 	//lay bien ket noi csdl
+		// 	$conn = Connection::getInstance();
+		// 	$query = $conn->prepare("insert into customers set name=:var_name, email=:var_email, password=:var_password");
+		// 	$query->execute(array("var_name"=>$name,"var_email"=>$email,"var_password"=>$password));
+		// }
 		public function modelDelete(){
 			$id = isset($_GET["id"])&&$_GET["id"] > 0 ? $_GET["id"] : 0;
 			//lay bien ket noi csdl

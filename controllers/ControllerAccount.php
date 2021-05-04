@@ -1,4 +1,4 @@
-<?php  
+<?php
 	include "models/ModelAccount.php";
 	class ControllerAccount extends Controller{
 		use ModelAccount;
@@ -6,7 +6,7 @@
 			$this->loadView("ViewRegister.php");
 		}
 		public function registerPost(){
-			$this->modelRegister();			
+			$this->modelRegister();
 		}
 		public function login(){
 			$this->loadView("ViewLogin.php");
@@ -17,7 +17,7 @@
 		public function logout(){
 			$this->modelLogout();
 		}
-		//xem danh sach cac don hang da mua		
+		//xem danh sach cac don hang da mua
 		public function orders(){
 			//quy dinh so ban ghi tren mot trang
 			$recordPerPage = 25;

@@ -28,7 +28,7 @@ $this->fileLayout = "LayoutTrangChu.php";
                     <div class="product-grid" id="product-1168979" style="height: 400px; overflow: hidden;">
                     <div class="image"> <a href="index.php?controller=products&action=detail&id=<?php echo $rows->id; ?>"><img src="./assets/upload/products/<?php echo $rows->photo; ?>" title="<?php echo $rows->name; ?>" alt="<?php echo $rows->name; ?>" class="img-responsive"></a> </div>
                       <div class="info">
-                      <h5 class="name text-truncate" style=""><a href="index.php?controller=products&action=detail&id=<?php echo $rows->id; ?>"><?php echo $rows->name; ?></a></h5>
+                      <h5 class="name text-truncate" style=""><a href="index.php?controller=products&action=detail&id=<?php echo $rows->id; ?>" title="<?php echo $rows->name; ?>" alt="<?php echo $rows->name; ?>"><?php echo $rows->name; ?></a></h5>
                         <p class="price-box"> <span class="special-price"> <span class="price product-price" style="text-decoration:line-through;"> <?php echo number_format($rows->price); ?></span> ₫ </span> </p>
                       <p class="price-box"> <span class="special-price" style="color: red; font-weight: bold;"> <span class="price product-price" > <?php echo number_format($rows->price - ($rows->price*$rows->discount/100)); ?> </span>₫ </span> </p>
                         <div class="action-btn">

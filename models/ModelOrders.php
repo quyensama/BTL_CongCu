@@ -1,4 +1,4 @@
-<?php 
+<?php
 	trait ModelOrders{
 		//ham liet ke danh sach cac ban ghi, co phan trang
 		public function modelRead($recordPerPage){
@@ -15,7 +15,7 @@
 			$query = $conn->query("select * from orders order by id,status desc limit $from, $recordPerPage");
 			//tra ve tat ca cac ban truy van duoc
 			return $query->fetchAll();
-		} 
+		}
 		//ham tinh tong so ban ghi
 		public function modelTotal(){
 			//---
@@ -34,7 +34,7 @@
 			return $query->fetch();
 			//---
 		}
-		//lay mot ban ghi trong table customers		
+		//lay mot ban ghi trong table customers
 		public function modelGetCustomers($id){
 			//---
 			$conn = Connection::getInstance();
@@ -43,7 +43,7 @@
 			return $query->fetch();
 			//---
 		}
-		//lay mot ban ghi trong table products		
+		//lay mot ban ghi trong table products
 		public function modelGetProducts($id){
 			//---
 			$conn = Connection::getInstance();
